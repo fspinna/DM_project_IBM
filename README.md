@@ -1,6 +1,6 @@
 # DM_project_IBM
 
-Preprocessing, clustering and sequential pattern mining della serie storica delle azioni IBM (open prices), con l'obiettivo di scoprire somigliaze tra gli andamenti annuali della serie, e trovare i pattern di oscillazione di prezzo più frequenti.
+Preprocessing, clustering e sequential pattern mining della serie storica delle azioni IBM (open prices), con l'obiettivo di scoprire somigliaze tra gli andamenti annuali della serie, e trovare i pattern di oscillazione di prezzo più frequenti.
 
 
 #### PREPROCESSING:
