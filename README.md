@@ -1,10 +1,2 @@
 # DM_project_IBM
 Preprocessing, clustering and sequential pattern mining of IBM stock time series.
-
-
-RISULTATI
-Dalle analisi fatte, più che gli algoritmi di clustering, a fare la differenza per qualità di risultato, sembrano essere le misure di distanza utilizzate. Ciò risulta particolarmente evidente osservando gli heatmap delle serie annuali, riordinati in base ai cluster.
-Si può infatti notare ad occhio nudo, come l’utilizzo di DBScan e Hierarchical con DTW come misura della distanza abbia portato a risultati differenti tra loro, ma nettamente migliori per omogeneità, riuscendo a raggruppare tra loro serie con andamenti simili. Ciò è quasi certamente dovuto alla flessibilità del Dinamic Time Warping, che, trovando il percorso che minimizza la distanza cumulativa, riesce a cogliere con efficacia l’allineamento ottimale tra le serie annuali.
-L’unico problema riscontrato nell’utilizzo di questa misura è stato l’elevato tempo di computazione della matrice delle distanze, che tuttavia può essere ovviato limitando il numero di calcoli, per esempio attraverso l’uso della Sakoe-Chiba band.
-Gli stessi algoritmi utilizzati con la Compression Based Dissimilarity non hanno portato a buoni risultati. Infatti, in questo particolare dataset, i valori della matrice delle distanze erano troppo simili tra loro, impedendo una corretta divisione in cluster. Sia plottando le serie dello stesso cluster, sia osservando gli heatmap è evidente come questa misura, in questo particolare caso, sia risultata inadeguata.
-Infine, per quanto riguarda la distanza basata sulle features, si sono ottenuti risultati intermedi. Se infatti l’heatmap non risulta particolarmente omogeneo, i grafici delle serie all’interno del medesimo cluster mostrano come questa misura riesca a cogliere non tanto i pattern specifici, quanto piuttosto l’andamento generale della serie. Probabilmente con l’utilizzo di features diverse, scelte ad hoc per questo problema, si potrebbero ottenere risultati migliori.
